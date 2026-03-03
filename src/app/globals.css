@@ -45,6 +45,13 @@
     --radius-2xl: calc(var(--radius) + 8px);
     --radius-3xl: calc(var(--radius) + 12px);
     --radius-4xl: calc(var(--radius) + 16px);
+
+    /* Custom spacing & sizing used in dashboard */
+    --spacing-18: 4.5rem;
+    --spacing-22: 5.5rem;
+    --spacing-80: 20rem;
+    --min-height-textarea: 320px;
+    --border-radius-input: 22px;
 }
 
 :root {
@@ -111,7 +118,7 @@
     --sidebar-primary: oklch(0.488 0.243 264.376);
     --sidebar-primary-foreground: oklch(0.985 0 0);
     --sidebar-accent: oklch(0.269 0 0);
-    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-accent-foreground: oklch(0.269 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
     --sidebar-ring: oklch(0.556 0 0);
 }
@@ -127,4 +134,9 @@
     [role="button"]:not(:disabled) {
         cursor: pointer;
     }
+}
+
+/* Dashboard textarea fix - Tailwind v4 arbitrary values workaround */
+.dashboard-textarea {
+    min-height: 320px;
 }
