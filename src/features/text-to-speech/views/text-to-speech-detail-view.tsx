@@ -3,7 +3,7 @@
 import { useTRPC } from "@/trpc/client";
 import { SettingsPanel } from "../components/setting-panel";
 import { TextInputPanel } from "../components/text-to-speech-input-panel";
-import { VoicePreviewPlaceholder } from "../components/voice-preview-placeholder";
+import VoicePreviewPlaceholder  from "../components/voice-preview-placeholder";
 
 import {
   TextToSpeechForm,
