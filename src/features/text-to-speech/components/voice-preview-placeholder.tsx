@@ -3,7 +3,7 @@ import { AudioLines, BookOpen, Sparkles, Volume2 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-export function VoicePreviewPlaceholder() {
+export default function VoicePreviewPlaceholder() {
   return (
     <div className="hidden flex-1 lg:flex h-full flex-col items-center justify-center gap-6 border-t">
       <div className="flex flex-col items-center gap-3">
