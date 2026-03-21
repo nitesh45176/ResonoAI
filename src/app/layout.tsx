@@ -21,6 +21,9 @@ export const metadata: Metadata = {
     default: "ResonoAI",
     template: "%s | ResonoAI",
   },
+  icons: {
+    icon: "/logo.svg",
+  },
   description: "AI-powered text-to-speech and voice cloning platform",
 };
 
