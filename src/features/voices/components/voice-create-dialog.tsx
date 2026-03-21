@@ -23,6 +23,7 @@ import { VoiceCreateForm } from "./voice-create-form";
 import { Button } from "@/components/ui/button";
 import { useCallback } from "react";
 import { toast } from "sonner";
+import { useCheckout } from "@/features/billing/hooks/use-checkout";
 
 interface VoiceCreateDialogProps {
   children?: React.ReactNode;
@@ -37,7 +38,7 @@ export function VoiceCreateDialog({
 }: VoiceCreateDialogProps) {
   const isMobile = useIsMobile();
 
-
+ const {checkout} = useCheckout()
 
   if (isMobile) {
     return (
