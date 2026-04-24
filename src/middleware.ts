@@ -13,9 +13,9 @@ export default clerkMiddleware(async (auth, req) => {
 
   if (isOrgSelectionRoute(req)) return NextResponse.next();
 
-  if (userId && !orgId) {
-    return NextResponse.redirect(new URL("/org-selection", req.url));
-  }
+  // if (userId && !orgId) {
+  //   return NextResponse.redirect(new URL("/org-selection", req.url));
+  // }
 
   return NextResponse.next();
 });

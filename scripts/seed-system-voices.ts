@@ -31,7 +31,13 @@ const envSchema = z.object({
   R2_BUCKET_NAME: z.string().min(1),
 });
 
-const env = envSchema.parse(process.env);
+let env: z.infer<typeof envSchema>;
+
+if (process.env.SKIP_ENV_VALIDATION !== "true") {
+  env = envSchema.parse(process.env);
+} else {
+  env = process.env as any; // skip validation but still use values
+}
 
 const adapter = new PrismaPg({ connectionString: env.DATABASE_URL });
 const prisma = new PrismaClient({ adapter });
